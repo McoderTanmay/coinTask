@@ -20,7 +20,7 @@ import COIN from './routers/index.js';
 // import TEST from './routers/test.js';
 
 // app.use("/api/test", TEST);
-app.use("/api/coin", COIN);
+app.use("/", COIN);
 
 const uri = process.env.MONGODBURI;
 //Database connecting
