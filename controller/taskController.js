@@ -1,9 +1,9 @@
 import Coin from "../models/coinModel.js";
 
 async function start(req, res) {
-  const { id } = req.query;
+  const { coin } = req.query;
   try {
-    const data = await Coin.findOne({ id }).sort({ createdAt: -1 });
+    const data = await Coin.findOne({ id:coin }).sort({ createdAt: -1 });
     return res.status(200).json({ code: 200, status: "success", data:data });
   } catch (error) {
     return res.status(500).json({ code: 500, status: "failed" });
